@@ -4,9 +4,11 @@ const nextConfig = {
   reactCompiler: true,
   turbopack: {
     rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
+      // The ThreeUI landing-page entries import authored documents with
+      // `?raw`; Turbopack itself has no built-in raw handling.
+      "*.html": {
+        condition: { query: "?raw" },
+        type: "text",
       },
     },
   },

@@ -10,6 +10,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored landing-page documents and runtime (Three.js r-version).
+    "public/landing-pages/**",
   ]),
 ]);
 
